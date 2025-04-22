@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Business App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="splash-screen">
+        <div class="splash-content">
+            LUXURIOUS TRANSACTIONS <br>
+            Loading...
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>LUXURIOUS TRANSACTIONS</h1>
+
+        <div class="section" style="background-color: #f9f9f9;">
+            <h2><a href="signin.html" style="text-decoration: none; color: inherit;">Sign In</a></h2>
+        </div>
+
+        <div class="section" style="background-color: #f9f9f9;">
+            <h2><a href="signup.html" style="text-decoration: none; color: inherit;">Sign Up</a></h2>
+        </div>
+
+        <div class="section" style="background-color: #673d74;">
+            <h2><a href="buy_bundle.html" style="text-decoration: none; color: inherit;">Buy Internet Bundle</a></h2>
+        </div>
+
+        <div class="section" style="background-color: #4e7f63;">
+            <h2><a href="buy_airtime.html" style="text-decoration: none; color: inherit;">Buy Airtime</a></h2>
+        </div>
+
+        <div class="section" style="background-color: #e6ee9c;">
+            <h2><a href="send_money.html" style="text-decoration: none; color: inherit;">Send Money</a></h2>
+        </div>
+
+        <div class="section" style="background-color: #486074;">
+            <h2>Receive Money</h2>
+            <div>
+                <h3>Receive Money</h3>
+                <label for="receiveNumber">Your Phone Number:</label>
+                <input type="tel" id="receiveNumber" name="receiveNumber" placeholder="e.g., 05XXXXXXXXX" required readonly>
+                <small>Money will be sent to this number.</small>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const splashScreen = document.getElementById('splash-screen');
+            if (splashScreen) {
+                setTimeout(function() {
+                    splashScreen.style.opacity = '0';
+                    setTimeout(function() {
+                        splashScreen.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }, 500);
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>

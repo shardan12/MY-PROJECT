@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="splash-screen">
+        <div class="splash-content">
+            My Business App <br>
+            Loading...
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const splashScreen = document.getElementById('splash-screen');
+            if (splashScreen) {
+                setTimeout(function() {
+                    splashScreen.style.opacity = '0';
+                    setTimeout(function() {
+                        splashScreen.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }, 500);
+                }, 3000);
+            }
+        });
+    </script>
+
+    <div class="container">
+        <div class="auth-section">
+            <h2>Sign Up</h2>
+            <label for="signUpEmail">Email:</label>
+            <input type="text" id="signUpEmail" name="signUpEmail" required>
+            <label for="signUpPassword">Password:</label>
+            <input type="password" id="signUpPassword" name="signUpPassword" required>
+            <label for="signUpConfirmPassword">Confirm Password:</label>
+            <input type="password" id="signUpConfirmPassword" name="signUpConfirmPassword" required>
+            <button>Sign Up</button>
+            <p class="auth-toggle">Already have an account? <a href="signin.html">Sign In</a></p>
+        </div>
+    </div>
+</body>
+</html>
+
